@@ -6,7 +6,7 @@ import static org.mockito.Mockito.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Before;
+import org.aspectj.lang.annotation.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -29,15 +29,14 @@ public class MedicalHistoryControllerTest {
     private MedicalHistoryServiceImpl medicalHistoryServiceImpl;
 
     // @Mock
-    // private MedicalHistoryService medicalHistoryService;
 
     @Mock
     private MedicalHistoryController medicalHistoryController;
 
-    @Before
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);
-    }
+//    @Before("")
+//    public void setUp() {
+//        MockitoAnnotations.initMocks(this);
+//    }
 
     @Test
     public void testGetMedicalHistory_Success() {
