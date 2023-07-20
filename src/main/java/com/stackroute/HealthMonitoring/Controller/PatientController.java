@@ -19,7 +19,6 @@ import com.stackroute.HealthMonitoring.model.Patient;
 
 @RestController
 @RequestMapping("/patient")
-@CrossOrigin(origins = "*")
 public class PatientController {
     @Autowired
     private PatientService patientService;

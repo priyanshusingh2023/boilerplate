@@ -19,8 +19,7 @@ import org.springframework.http.HttpStatus;
  */
 
 @RestController
-@RequestMapping("/Auth")
-@CrossOrigin("*")
+@RequestMapping("/auth")
 public class AuthController {
    @Autowired
     private UserRepo userRepo;

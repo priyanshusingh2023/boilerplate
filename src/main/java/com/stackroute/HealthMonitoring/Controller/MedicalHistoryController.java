@@ -17,8 +17,7 @@ import com.stackroute.HealthMonitoring.Service.MedicalHistoryService;
 import com.stackroute.HealthMonitoring.model.MedicalHistory;
 
 @RestController
-@RequestMapping("/patient")
-@CrossOrigin
+@RequestMapping("/medical-history")
 public class MedicalHistoryController {
 	@Autowired
 	private MedicalHistoryService medicalHistoryService;
