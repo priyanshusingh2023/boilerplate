@@ -1,10 +1,7 @@
 package com.stackroute.HealthMonitoring.config;
 
 import javax.servlet.http.HttpServletResponse;
-//add import
 import com.stackroute.HealthMonitoring.repo.UserRepo;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

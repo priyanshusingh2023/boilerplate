@@ -30,7 +30,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-// create a entity class for registration of new health care provider
 public class User implements UserDetails{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

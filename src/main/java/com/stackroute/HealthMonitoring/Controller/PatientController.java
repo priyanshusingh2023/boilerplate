@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,13 +36,11 @@ public class PatientController {
 
     }
 
-    // create a restcontroller method to get a patient by id
     @GetMapping("/getPatient/{patientId}")
     public ResponseEntity<?> getPatient(@PathVariable Long patientId) {
         return ResponseEntity.ok(patientService.getPatient(patientId));
     }
 
-    // create a restcontroller method to update a patient
     @PutMapping("/updatePatient/{patientId}")
     public ResponseEntity<Patient> updatePatient(@PathVariable Long patientId, @RequestBody Patient patient) {
         patient.setPatientId(patientId);
@@ -56,8 +53,7 @@ public class PatientController {
 
     }
 
-    // create a restcontroller method to delete a patient
-  // This function takes a patient ID as input and deletes the patient with that ID.
+
 
   @GetMapping("/getPatientById/{patientId}")
     public ResponseEntity<Patient> getPatientById(@PathVariable Long patientId) {
@@ -68,7 +64,6 @@ public class PatientController {
         return ResponseEntity.notFound().build();
     }
 
-    // create a restcontroller method to get all patients
     @GetMapping("/getAllPatients")
     public ResponseEntity<?> getAllPatients() {
         return ResponseEntity.ok(patientService.getAllPatients());

@@ -6,9 +6,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.UnsupportedJwtException;
-//add import
-//import signature
-import io.jsonwebtoken.SignatureException; 
+import io.jsonwebtoken.SignatureException;
 import com.stackroute.HealthMonitoring.model.User;
 import java.util.Date;
 import org.slf4j.Logger;
@@ -28,7 +26,6 @@ public class JwtTokenUtility {
 	public String generateAccessToken(User user) {
 		return Jwts.builder()
 				.setSubject(String.format("%s,%s", user.getUserId(), user.getEmail()))
-				.setIssuer("WiproLimited")
 				.setIssuedAt(new Date())
 				.setExpiration(new Date(System.currentTimeMillis() + EXPIRE_DURATION))
 				.signWith(SignatureAlgorithm.HS512, SECRET_KEY)

@@ -1,7 +1,6 @@
 package com.stackroute.HealthMonitoring.repo;
 
 import com.stackroute.HealthMonitoring.model.User;
-//add required imports
 import org.springframework.stereotype.Repository;
 import java.util.Optional;
 

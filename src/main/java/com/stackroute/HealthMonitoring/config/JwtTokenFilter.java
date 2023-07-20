@@ -2,7 +2,6 @@ package com.stackroute.HealthMonitoring.config;
 
 import java.io.IOException;
 import javax.servlet.FilterChain;
-//add import
 
 import com.stackroute.HealthMonitoring.model.User;
 import javax.servlet.ServletException;

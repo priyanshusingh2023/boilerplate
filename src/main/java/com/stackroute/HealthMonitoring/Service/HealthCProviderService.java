@@ -20,14 +20,9 @@ private final BCryptPasswordEncoder passwordEncoder;
     }
 
     public User registerHealthCareProvider(User user) {
-        // Perform necessary logic for registering the health care provider
-        // Encrypt/hash the password before saving the user data
         String encryptedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encryptedPassword);
         User savedUser = userRepo.save(user);
-        // Save the user data to the database or any other storage mechanism
-        // Example implementation:
-        // Save the user object to the database or any other storage mechanism
         return savedUser;
     }
 }

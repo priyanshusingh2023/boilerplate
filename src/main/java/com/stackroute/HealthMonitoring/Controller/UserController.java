@@ -18,8 +18,6 @@ public class UserController {
     @PostMapping("/register")
     public ResponseEntity<?> registerHealthCareProvider(@RequestBody User user) {
         try {
-            // Perform necessary validations on the user object
-            // Save the user data to the database or any other storage mechanism
            User savedUser=healthCareProviderService.registerHealthCareProvider(user);
 
             return new ResponseEntity<User>(savedUser, HttpStatus.CREATED);
