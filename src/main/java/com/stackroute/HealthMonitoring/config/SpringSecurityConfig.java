@@ -55,7 +55,7 @@ public class SpringSecurityConfig {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.headers().frameOptions().disable();
         http.authorizeRequests()
-                .antMatchers("/Auth/login","/h2-console/*","/hprovider/register","/patient/**").permitAll()
+                .antMatchers("/**").permitAll()
                 .anyRequest().authenticated();
          
             http.exceptionHandling()
