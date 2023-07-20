@@ -46,6 +46,6 @@ jobs:
 
 # push the docker image to docker hub
     - name: Push the Docker image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/boilerplate:latest
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/boilerplatee:latest
 
 
