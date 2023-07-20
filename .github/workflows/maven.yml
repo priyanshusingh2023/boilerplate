@@ -42,7 +42,7 @@ jobs:
 
 # build the docker image
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/boilerplatee:latest
+      run: docker build . --file Dockerfile --tag boilerplatee:latest
 
 # push the docker image to docker hub
     - name: Push the Docker image
